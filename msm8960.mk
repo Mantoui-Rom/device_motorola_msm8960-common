@@ -45,7 +45,8 @@ PRODUCT_PACKAGES += \
 
 # Misc
 PRODUCT_PACKAGES += \
-    DevicePerformanceSettingsHelper
+    DevicePerformanceSettingsHelper \
+    sqlite3
 
 # Symlinks
 PRODUCT_PACKAGES += \
@@ -55,10 +56,6 @@ PRODUCT_PACKAGES += \
 # EGL config
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/config/egl.cfg:system/lib/egl/egl.cfg
-
-# GPS configuration
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/gps/gps.conf:system/etc/gps.conf
 
 # Wifi
 PRODUCT_COPY_FILES += \
@@ -90,7 +87,7 @@ PRODUCT_COPY_FILES += \
 ifeq ($(TARGET_USES_MOTOROLA_MSM8960_COMMON_MEDIA_PROFILES),true)
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/config/media_profiles.xml:system/etc/media_profiles.xml \
-    $(LOCAL_PATH)/config/media_profiles_xt9xx.xml:system/etc/media_profiles_xt9xx.xml
+    $(LOCAL_PATH)/config/media_profiles_xt90x.xml:system/etc/media_profiles_xt90x.xml
 endif
 
 # Media codecs
